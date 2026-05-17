@@ -41,8 +41,8 @@ export default defineEventHandler(async (event) => {
             timeframe,
             status: 'lead',
         });
-        pb.authStore.clear();
-        fetch(config.pipedreamNotificationUrl, {
+        
+        await fetch(config.pipedreamNotificationUrl, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -56,6 +56,7 @@ export default defineEventHandler(async (event) => {
                 fromSite: "CGB Tech Solutions",
             }),
         });
+        pb.authStore.clear();
     } catch (error) {
         console.error('Error saving contact message:', error);
         return {
