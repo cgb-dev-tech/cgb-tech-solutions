@@ -97,8 +97,7 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ ...event.data })
-        // body: JSON.stringify({ ...event.data, turnstileToken: turnstileToken.value })
+        body: JSON.stringify({ ...event.data, turnstileToken: turnstileToken.value })
     })
     loading.value = false;
 
