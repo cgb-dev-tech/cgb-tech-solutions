@@ -40,5 +40,38 @@ export default defineNuxtConfig({
         ]
       },
     },
-  }
+  }, 
+  seo: {
+    meta: {
+      // Basic SEO
+      title: 'CGB Tech Solutions - Custom Software Development',
+      description: 'CGB Tech Solutions is a software development company specializing in custom web and mobile applications, cloud solutions, and IT consulting services. We help businesses leverage technology to achieve their goals.',
+      author: 'Chris Gardiner-Bill',
+
+      // Theme & Color
+      themeColor: [
+        { content: '#18181b', media: '(prefers-color-scheme: dark)' },
+        { content: 'white', media: '(prefers-color-scheme: light)' },
+      ],
+      colorScheme: 'dark light',
+
+      // Social Media
+      // twitterCreator: '@CGBTechSolutions',
+      // twitterSite: '@CGBTechSolutions',
+
+      // App Info
+      applicationName: 'CGB Tech Solutions',
+
+      // Nuxt SEO Utils already sets the below tags for you
+      ogSiteName: 'CGB Tech Solutions',
+      ogLocale: 'en_AU',
+      ogType: 'website',
+      ogUrl: 'https://cgbtechsolutions.com',
+      ogTitle: 'CGB Tech Solutions - Custom Software Development',
+
+      // Other Nuxt SEO modules handle these
+      ogImage: '/cgb-logo-icon-only.png',
+      robots: 'index, follow',
+    },
+  },
 })
