@@ -41,6 +41,10 @@ export default defineNuxtConfig({
       },
     },
   }, 
+  site: {
+    url: 'https://cgbtechsolutions.com.au',
+    name: 'CGB Tech Solutions',
+  },
   seo: {
     meta: {
       // Basic SEO
@@ -66,7 +70,7 @@ export default defineNuxtConfig({
       ogSiteName: 'CGB Tech Solutions',
       ogLocale: 'en_AU',
       ogType: 'website',
-      ogUrl: 'https://cgbtechsolutions.com',
+      ogUrl: 'https://cgbtechsolutions.com.au',
       ogTitle: 'CGB Tech Solutions - Custom Software Development',
 
       // Other Nuxt SEO modules handle these
