@@ -2,6 +2,7 @@ import { process } from "zod/v4/core";
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  sourcemap: { server: false, client: false },
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
   modules: ['@nuxt/image', '@nuxt/ui', '@nuxtjs/turnstile', '@nuxt/content', '@nuxtjs/seo', 'nuxt-umami'],
