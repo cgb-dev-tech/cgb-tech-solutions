@@ -6,10 +6,10 @@ export default defineEventHandler(async (event) => {
     const { name, email, message, company, budget, timeframe, turnstileToken, website } = body;
     
     if (website) {
-        return {
-            status: 400,
-            message: 'Bad request.',
-        };
+        throw createError({
+            statusCode: 400,
+            statusMessage: 'Bad request.',
+            message: 'Bot detected.',});
     }
     const isValidToken = await verifyTurnstileToken(turnstileToken);
 
